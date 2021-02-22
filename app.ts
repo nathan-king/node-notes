@@ -1,4 +1,7 @@
-// const notes = require("./notes.js");
 import getNotes from "./notes";
+import { bgGreen } from "chalk";
+const print = console.log;
+
 const msg: string = getNotes();
-console.log(msg);
+print(msg);
+print(bgGreen("Success!"));
