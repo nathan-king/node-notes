@@ -31,9 +31,14 @@ yargs
             describe: "Note title",
             demandOption: true,
             type: "string",
+        },
+        body: {
+            describe: "Body content",
+            demandOption: true,
+            type: "string",
         }
     },
-    handler: (argv) => print(`Title: ${argv.title}\n`)
+    handler: (argv) => print(`Title: ${argv.title}\n` + `Body: ${argv.body}\n`)
 })
     .command({
     command: "remove",
